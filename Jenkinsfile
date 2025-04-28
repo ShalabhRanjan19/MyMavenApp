@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-repo-name.git'
+                git 'https://github.com/ShalabhRanjan19/MyMavenApp.git'
             }
         }
 
