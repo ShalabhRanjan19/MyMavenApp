@@ -6,12 +6,13 @@ pipeline {
         maven 'maven-3.9.0' // The name you set for Maven
     }
 
-    stage('Checkout') {
-    steps {
-        git branch: 'main', 
-            url: 'https://github.com/ShalabhRanjan19/MyMavenApp.git'
-    }
-}
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', 
+                    url: 'https://github.com/ShalabhRanjan19/MyMavenApp.git'
+            }
+        }
 
         stage('Build') {
             steps {
@@ -29,4 +30,3 @@ pipeline {
         }
     }
 }
-
